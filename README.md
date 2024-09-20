@@ -80,7 +80,8 @@ It starts all following services needed by the project that we will be using:
   }
 }
 ```
-- 
+    - Note that instead of using Swagger, you could use the cURL command line interface
+- In the management console, refresh the list of process. The newly created one should now show.
 
 
 
