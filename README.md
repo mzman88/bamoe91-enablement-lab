@@ -28,14 +28,22 @@ Connect to the BAMOE 9.1 TechZone VM:
 The project that we will be using is stored in the `C:/kogito-examples/kogito-quarkus-examples/jbpm-compact-architecture-example/` folder.
 
 The business process is a basic one detail a hiring process.
+The hiring process aims at identifying if a candidate is a good fit, following the given workflow:
 
 ![Hiring Process](images/HiringProcessBPMN.jpg)
+
+The data model used by the business process is the following one:
+
+![Hiring Data Model](images/HiringDataModel.jpg)
 
 In the process, an automatic decision is made to compute the offer and is using business rules implemented as DMN:
 
 ![Compute Offer DRG](images/ComputeOfferDMNDRG.jpg)
 
 ![Compute Offer Decision Table](images/ComputeOfferDMNDT.jpg)
+
+It also includes 2 human tasks corresponding to a human resource interviewer followed by an IT interviewer, both defined as human tasks.
+A few other tasks are defined, mostly script tasks for logging purposes.
 
 
 ### Start
@@ -68,7 +76,7 @@ It starts all following services needed by the project that we will be using:
     - URL: http://localhost:8080/q/swagger-ui
     - Note that the REST endpoints are specific to the business process and have been automatically generated
 - Start a process instance
-    - Using Swagger and the `/hiring` **POST** endpoint, create a new process instance by clicking on `Try it out` and using the following input data (Note that instead of using Swagger, you could use the cURL command line interface):
+    - Using Swagger and the `/hiring` **POST** endpoint, create a new process instance by clicking on `Try it out` and using the following input data (Note that instead of using Swagger, you could use the `cURL` command line interface):
 ```json
 {
   "candidateData": {
