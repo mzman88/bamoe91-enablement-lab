@@ -36,13 +36,13 @@ The data model used by the business process is the following one. It includes 1 
 
 ![Hiring Data Model](images/HiringDataModel.jpg)
 
-In the process, an automatic decision is made to compute the offer and is using business rules implemented as DMN:
+In the process, an automatic decision is made to compute the offer and is using business rules implemented as DMN.
 
-DMN model:
+- DMN model:
 
 ![Compute Offer DRG](images/ComputeOfferDMNDRG.jpg)
 
-DMN Decision Table:
+- DMN Decision Table:
 
 ![Compute Offer Decision Table](images/ComputeOfferDMNDT.jpg)
 
