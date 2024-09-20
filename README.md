@@ -68,7 +68,7 @@ It starts all following services needed by the project that we will be using:
     - URL: http://localhost:8080/q/swagger-ui
     - Note that the REST endpoints are specific to the business process and have been automatically generated
 - Start a process instance
-    - Using Swagger and the `/hiring` **POST** endpoint, create a new process instance by clicking on `Try it out` and using the following input data:
+    - Using Swagger and the `/hiring` **POST** endpoint, create a new process instance by clicking on `Try it out` and using the following input data (Note that instead of using Swagger, you could use the cURL command line interface):
 ```json
 {
   "candidateData": {
@@ -81,7 +81,6 @@ It starts all following services needed by the project that we will be using:
 }
 ```
 
-    - Note that instead of using Swagger, you could use the cURL command line interface
 - In the management console, refresh the list of process. The newly created one should now show.
 
 
