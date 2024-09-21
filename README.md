@@ -34,11 +34,14 @@ Your VM has already been set up for a BAMOE 9.1 usage, including:
 
 - JDK 17
 - Visual Studio Code & BAMOE editors
+- Maven
+- GIT client
 - A local Maven repository for the BAMOE 9.1 distribution, located in <TODO>
 - Docker CLI
 - Podman
 - A sample of the compact architecture which we will be using as a lab
 - A script to run a *docker-compose* YAML file
+- Canvas
 
 
 ### Sample project
@@ -48,8 +51,8 @@ The project that is located in the `C:\kogito-examples\kogito-quarkus-examples\j
 
 We will use VSCode to edit all projects artifacts.  In a Windows Command Prompt (type `cmd` in the search bar), navigate to the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\` folder, and type `code .`.  This will open an instance of VSCode and load the project.  Close all editor that will open.
 
-In this project, a business process (defined as BPMN) and business rules (defined as DMN) can be found under the `src/resources` folder.
-Open both `src\resources\hiring.bpmn` and `src\resources\NewHiringOffer.dmn` file in VSCode and get familiar with them.
+In this project, a business process (defined as BPMN) and business rules (defined as DMN) can be found under the `src\main\resources` folder.
+Open both `src\main\resources\hiring.bpmn` and `src\main\resources\NewHiringOffer.dmn` file in VSCode and get familiar with them.
 
 The business process is a basic one detail a hiring process.
 The hiring process aims at identifying if a candidate is a good fit, following the given workflow:
@@ -248,8 +251,22 @@ You should get the requested information about all process instances:
 
 ## Use the Canvas
 
-URL: http://localhost:9090
-<TODO: we will not use the Canvas for the lab, but since it is installed in the VM, we will play with it>
-<TODO: load the following BPMN file stored in XXXX>
-<TODO: instructions to load>
+In this lab, we have used VSCode to view and edit our business process and business rules. 
 
+BAMOE 9 also features Canvas, a web application UI for designing and comitting artifacts. Canvas ia accessible on the TechZone VMs at the following URL:  http://localhost:9090
+
+![Canvas](images/Canvas1.jpg)
+
+For IBM BAMOE clients, Canvas is provided as a tool which can connect to a remote enterprise GIT repository.
+It also allows non-technical users to participate in a BAMOE project without the need to use an IDE such as VSCode.
+
+Upload the following file into Canvas: `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\hiring.bpmn`
+
+In the TechZone VM, Canvas was not set up to use a remote GIT repository. But clients will want to do so. For now, the following options are avilable within Canvas:
+
+![GIT Providers](images/GitProviders.jpg)
+
+
+
+
+**This complete the BAMOE 9.1 lab.**
