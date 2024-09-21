@@ -23,20 +23,20 @@ This project is part of the BAMOE 9.1 distribution samples and includes a *docke
 
 ### TechZone
 
-Connect to the BAMOE 9.1 TechZone VM: either using Microsoft Remote Desktop or within a Chrome browser.
+Connect to the BAMOE 9.1 TechZone VM, either using Microsoft Remote Desktop or within a Chrome browser.
 <TODO>XXX.services.cloud.techzone.ibm.com:XXX is the URL, replacing witht the port assigned to you.
-The VM are Windows-based and the credentials to login are: user: `techzone`, password: `IBMDem0s!`
+The VMs are Windows-based and the credentials to login are: user: `techzone`, password: `IBMDem0s!`
 
 
 ### Detail of the set up
 
-The VM has already been set up for a BAMOE 9.1 usage, including:
+Your VM has already been set up for a BAMOE 9.1 usage, including:
 
 - JDK 17
 - A local Maven repository for the BAMOE 9.1 distribution, located in <TODO>
 - Docker CLI
 - A sample of the compact architecture which we will be using as a lab
-- A script to run a docker-compose YAML file
+- A script to run a *docker-compose* YAML file
 
 
 ### Sample project
@@ -76,15 +76,15 @@ BPMN specification and BAMOE includes many more types of tasks, but we will only
 On the desktop, the `start-compact.bat` batch file needs to be run. 
 It starts all following services needed by the project that we will be using:
 
-- PostgreSQL database service (port 5432) - this databse is needed for this sample because the project contains a stateful business process which requires persistence
+- PostgreSQL database service (port 5432) - this database is needed for this sample because the project contains a stateful business process which requires persistence
 - PgAdmin (port 8055) - the UI to management the database
 - Keycloak (port 8480) - software to handle security
 - Kogito example service (port 8080)
 - Management Console (port 8280) - UI to manage the process instances
 - Task Console (port: 8380) - UI to manage the task inbox
 
-Please note that the docker-compose is useful for testing purposes but in Production clients would most likely not use this way to deploy.
-The projects containing the business logic (i.e. business processes and business rules) are to be built and deployed on Quarkus, which is actually done for you using the `docker-compose` file.
+Please note that the *docker-compose* is useful for testing purposes but in Production clients would most likely not use this way to deploy.
+The projects containing the business logic (i.e. business processes and business rules) are to be built and deployed on Quarkus, which is actually done for you using the *docker-compose* file.
 
 
 ### Steps
