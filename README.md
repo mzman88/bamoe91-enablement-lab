@@ -165,7 +165,7 @@ BAMOE 9 features GraphQL queries which will allow to send requests to fetch info
 In a new tab of your browser, go to the following URL: http://localhost:8080/q/graphql-ui
 This will open the GraphQL UI which will let you send queries.
 Send a query requesting for information about a specific process instance, by typing the following query:
-```json
+```graphql
 { ProcessInstances {
   id,
   processId,
@@ -177,7 +177,8 @@ Send a query requesting for information about a specific process instance, by ty
     enter,
     exit
   }
-} }```
+} }
+```
 
 You should get the requested information about all process instances:
 ```json
