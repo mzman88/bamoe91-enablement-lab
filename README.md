@@ -81,6 +81,8 @@ For more information about the project, please refer to the README.
 BPMN specification and BAMOE includes many more types of tasks, but we will only be using a few of them for this lab.
 
 
+This project also includes a POM file which contains all libraries dependencies needed for the project, as well as BAMOE 9 extensions, such as the ones for the 2 consoles.
+
 
 ### Start
 
