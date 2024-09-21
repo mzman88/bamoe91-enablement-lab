@@ -24,7 +24,7 @@ This project is part of the BAMOE 9.1 distribution samples and includes a *docke
 ### TechZone
 
 Connect to the BAMOE 9.1 TechZone VM, either using Microsoft Remote Desktop or within a Chrome browser.
-<TODO>XXX.services.cloud.techzone.ibm.com:XXX is the URL, replacing witht the port assigned to you.
+<region>.services.cloud.techzone.ibm.com:XXX is the URL, replacing with the port assigned to you.
 The VMs are Windows-based and the credentials to login are: user: `techzone`, password: `IBMDem0s!`
 
 
@@ -33,6 +33,7 @@ The VMs are Windows-based and the credentials to login are: user: `techzone`, pa
 Your VM has already been set up for a BAMOE 9.1 usage, including:
 
 - JDK 17
+- Visual Studio Code & BAMOE editors
 - A local Maven repository for the BAMOE 9.1 distribution, located in <TODO>
 - Docker CLI
 - A sample of the compact architecture which we will be using as a lab
@@ -41,8 +42,13 @@ Your VM has already been set up for a BAMOE 9.1 usage, including:
 
 ### Sample project
 
-The project that we will be using is stored in the `C:/kogito-examples/kogito-quarkus-examples/jbpm-compact-architecture-example/` folder.
+We will take a look at the project that we will benusing for this lab. 
+The project that is located in the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example` folder.
+
+We will use VSCode to edit all projects artifacts.  In a Windows Command Prompt (type `cmd` in the search bar), navigate to the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\` folder, and type `code .`.  This will open an instance of VSCode and load the project.  Close all editor that will open.
+
 In this project, a business process (defined as BPMN) and business rules (defined as DMN) can be found under the `src/resources` folder.
+Open both `src\resources\hiring.bpmn` and `src\resources\NewHiringOffer.dmn` file in VSCode and get familiar with them.
 
 The business process is a basic one detail a hiring process.
 The hiring process aims at identifying if a candidate is a good fit, following the given workflow:
@@ -71,6 +77,8 @@ For more information about the project, please refer to the README.
 BPMN specification and BAMOE includes many more types of tasks, but we will only be using a few of them for this lab.
 
 
+
+
 ### Start
 
 On the desktop, the `start-compact.bat` batch file needs to be run. 
@@ -87,7 +95,7 @@ Please note that the *docker-compose* is useful for testing purposes but in Prod
 The projects containing the business logic (i.e. business processes and business rules) are to be built and deployed on Quarkus, which is actually done for you using the *docker-compose* file.
 
 
-### Steps
+### Interact with the process
 
 - In a new Chrome tab, open PGAdmin
     - URL: http://localhost:8055
@@ -233,6 +241,7 @@ You should get the requested information about all process instances:
   }
 }
 ```
+
 
 
 ## Use the Canvas
