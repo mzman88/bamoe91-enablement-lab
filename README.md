@@ -1,12 +1,12 @@
 # BAMOE 9 Enablement - Lab
 
-This project contains the lab for the BAMOE 9 enablement.
+This project details the lab for the BAMOE 9 enablement.
 
 ## Objectives
 
-In this lab, we will be using the VM already set up for BAMOE 9.1 usage.
+In this lab, we will be using the VM already set up for BAMOE 9.1 usage in TechZone.
 We will be starting all services and deploy a sample project which contains a business process.
-This project is part of the BAMOE 9.1 distribution samples and includes a docker-compose configuration aiming at starting all needed services.
+This project is part of the BAMOE 9.1 distribution samples and includes a *docker-compose* configuration aiming at starting all needed services.
 
 
 ## Steps
@@ -26,6 +26,7 @@ Connect to the BAMOE 9.1 TechZone VM:
 ### Sample project
 
 The project that we will be using is stored in the `C:/kogito-examples/kogito-quarkus-examples/jbpm-compact-architecture-example/` folder.
+In this project, a business process (defined as BPMN) and business rules (defined as DMN) can be found under the `src/resources` folder.
 
 The business process is a basic one detail a hiring process.
 The hiring process aims at identifying if a candidate is a good fit, following the given workflow:
@@ -48,7 +49,10 @@ In the process, an automatic decision is made to compute the offer and is using 
 
 It also includes 2 human tasks corresponding to a human resource interviewer followed by an IT interviewer, both defined as human tasks.
 A few other tasks are defined, mostly script tasks for logging purposes.
-BPMN sprcification and BAMOE includes many more types of tasks, but we will only be using a few of them for this lab.
+
+For more information about the project, please refer to the README.
+
+BPMN specification and BAMOE includes many more types of tasks, but we will only be using a few of them for this lab.
 
 
 ### Start
