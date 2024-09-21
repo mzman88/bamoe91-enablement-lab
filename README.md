@@ -2,6 +2,16 @@
 
 This project details the lab for the BAMOE 9 enablement.
 
+
+## Important
+
+Please keep in mind that BAMOE 9.1 is Tech Preview for stateful processes use cases and is not meant for Production. 
+Therefore, some features and functionalities are either non provided or still being tested.
+The 9.2 release scheduled for Q4-2024 will be the first supported version of BAMOE 9 powered by Kogito.
+
+Note that 9.1 is supported for stateless business processes i.e. which do not require persistence.
+
+
 ## Objectives
 
 In this lab, we will be using the VM already set up for BAMOE 9.1 usage in TechZone.
@@ -13,14 +23,20 @@ This project is part of the BAMOE 9.1 distribution samples and includes a *docke
 
 ### TechZone
 
-Connect to the BAMOE 9.1 TechZone VM: 
+Connect to the BAMOE 9.1 TechZone VM: either using Microsoft Remote Desktop or within a Chrome browser.
+<TODO>XXX.services.cloud.techzone.ibm.com:XXX is the URL, replacing witht the port assigned to you.
+The VM are Windows-based and the credentials to login are: user: `techzone`, password: `IBMDem0s!`
 
-<TODO: URL to connect>
 
 ### Detail of the set up
 
-<TODO: This VM is using Windows as Operating System>
-<TODO: the Maven repository has already been set up in the XXX folder which contains the BAMOE 9 distribution>
+The VM has already been set up for a BAMOE 9.1 usage, including:
+
+- JDK 17
+- A local Maven repository for the BAMOE 9.1 distribution, located in <TODO>
+- Docker CLI
+- A sample of the compact architecture which we will be using as a lab
+- A script to run a docker-compose YAML file
 
 
 ### Sample project
@@ -67,12 +83,15 @@ It starts all following services needed by the project that we will be using:
 - Management Console (port 8280) - UI to manage the process instances
 - Task Console (port: 8380) - UI to manage the task inbox
 
+Please note that the docker-compose is useful for testing purposes but in Production clients would most likely not use this way to deploy.
+The projects containing the business logic (i.e. business processes and business rules) are to be built and deployed on Quarkus, which is actually done for you using the `docker-compose` file.
+
 
 ### Steps
 
 - In a new Chrome tab, open PGAdmin
     - URL: http://localhost:8055
-    - Check out the tables by expanding `Servers > kogito > Databases > kogito > Schemas > public > Tables`
+    - Check out the BAMOE 9 tables by expanding `Servers > kogito > Databases > kogito > Schemas > public > Tables`
 - In a new Chrome tab, open the Management Console
     - URL: http://localhost:8280
     - Login using the following credentials: user: jdoe, password: jdoe.  This user and his business roles have been added at startup in the keycloak configuration
@@ -98,7 +117,36 @@ It starts all following services needed by the project that we will be using:
 }
 ```
 
-- In the management console, refresh the list of process. The newly created one should now show.
+If the operation is successful, you should get a result similar to the following, depending on your input data:
+```json
+{
+  "id": "a1b52e1d-a9c8-4478-a17c-05427cba777e",
+  "offer": {
+    "category": "Senior Software Engineer",
+    "salary": 40450
+  }
+}
+```
+
+This `id` corresponds to the process instance ID which need to be used for later interaction with the process instance.
+
+
+- In the management console, refresh the list of process. The newly created one should now show. 
+
+![Process Instance List](images/ProcessInstancesList.jpg)
+
+If you had created multiple process instances, they would all show on that console.
+
+If you now click on the process instance ID that you just created, you will get the details.
+
+![Process Instance Details](images/ProcessInstanceDetails.jpg)
+
+<TODO>
+
+- In the Task Console, refresh the list of tasks. You should now see the task that needs to be completed first, which corresponds to the Human Resource interviewer task.
+Please note that there is a boundary timer on this task set to 180 seconds, so if you do not complete this task within 3mn, it will move to the next step of the process.  In such a case, you will need to recreate a new process instance as you did before.
+
+![Task Inbox](images/TaskInboxList.jpg)
 
 
 
