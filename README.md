@@ -36,6 +36,7 @@ Your VM has already been set up for a BAMOE 9.1 usage, including:
 - Visual Studio Code & BAMOE editors
 - A local Maven repository for the BAMOE 9.1 distribution, located in <TODO>
 - Docker CLI
+- Podman
 - A sample of the compact architecture which we will be using as a lab
 - A script to run a *docker-compose* YAML file
 
@@ -78,11 +79,10 @@ BPMN specification and BAMOE includes many more types of tasks, but we will only
 
 
 
-
 ### Start
 
 On the desktop, the `start-compact.bat` batch file needs to be run. 
-It starts all following services needed by the project that we will be using:
+This will start all following services needed by the project that we will be using:
 
 - PostgreSQL database service (port 5432) - this database is needed for this sample because the project contains a stateful business process which requires persistence
 - PgAdmin (port 8055) - the UI to management the database
@@ -90,6 +90,8 @@ It starts all following services needed by the project that we will be using:
 - Kogito example service (port 8080)
 - Management Console (port 8280) - UI to manage the process instances
 - Task Console (port: 8380) - UI to manage the task inbox
+
+All these services are started as containers and deployed onto Podman.
 
 Please note that the *docker-compose* is useful for testing purposes but in Production clients would most likely not use this way to deploy.
 The projects containing the business logic (i.e. business processes and business rules) are to be built and deployed on Quarkus, which is actually done for you using the *docker-compose* file.
@@ -170,7 +172,7 @@ Click on the `Complete` button at the bottom of the page. This will tell the pro
 ## GraphQL queries
 
 BAMOE 9 features GraphQL queries which will allow to send requests to fetch information about process instances.
-In a new tab of your browser, go to the following URL: http://localhost:8080/q/graphql-ui
+In a new tab of your browser, go to the following URL: http://localhost:8080/q/graphql-ui/
 This will open the GraphQL UI which will let you send queries.
 Send a query requesting for information about a specific process instance, by typing the following query:
 ```graphql
