@@ -128,28 +128,110 @@ If the operation is successful, you should get a result similar to the following
 }
 ```
 
-This `id` corresponds to the process instance ID which need to be used for later interaction with the process instance.
+This `id` corresponds to the process instance ID which will need to be used for later interaction with the process instance.
 
 
-- In the management console, refresh the list of process. The newly created one should now show. 
+- In the management console, refresh the list of process instances. The newly created one should now show. 
 
 ![Process Instance List](images/ProcessInstancesList.jpg)
 
 If you had created multiple process instances, they would all show on that console.
 
-If you now click on the process instance ID that you just created, you will get the details.
+- Click on the process instance ID that you just created, you will get its details.
 
 ![Process Instance Details](images/ProcessInstanceDetails.jpg)
 
-<TODO>
+You can see the information related to this process instance, including the data, the timeline, 
+Keep in mind that all this information is persisted in the BAMOE database.
+
 
 - In the Task Console, refresh the list of tasks. You should now see the task that needs to be completed first, which corresponds to the Human Resource interviewer task.
 Please note that there is a boundary timer on this task set to 180 seconds, so if you do not complete this task within 3mn, it will move to the next step of the process.  In such a case, you will need to recreate a new process instance as you did before.
 
 ![Task Inbox](images/TaskInboxList.jpg)
 
+- Click on the task instance you want to work on, this will take you to a form that list the data for this task to complete. You may approve or not the condidate. 
+Click on the `Complete` button at the bottom of the page. This will tell the process that this task instance is complete and needs to move to the next one, which is the IT interview.
+
+- Switch back to the Process Console, you should see in the diagram that the process instance is now waiting on the IT interview task.
+
+![Process Instance Details](images/ProcessInstanceDetails2.jpg)
 
 
+
+## GraphQL queries
+
+BAMOE 9 features GraphQL queries which will allow to send requests to fetch information about process instances.
+In a new tab of your browser, go to the following URL: http://localhost:8080/q/graphql-ui
+This will open the GraphQL UI which will let you send queries.
+Send a query requesting for information about a specific process instance, by typing the following query:
+```json
+{ ProcessInstances {
+  id,
+  processId,
+  processName,
+  state,
+  nodes {
+    name,
+    type,
+    enter,
+    exit
+  }
+} }```
+
+You should get the requested information about all process instances:
+```json
+{
+  "data": {
+    "ProcessInstances": [
+      {
+        "id": "56158ef1-b53c-4b43-8404-e59aa3472566",
+        "processId": "hiring",
+        "processName": "hiring",
+        "state": "ACTIVE",
+        "nodes": [
+          {
+            "name": "Start",
+            "type": "StartNode",
+            "enter": "2024-09-21T03:39:13.452Z",
+            "exit": "2024-09-21T03:39:15.749Z"
+          },
+          {
+            "name": "New Hiring",
+            "type": "ActionNode",
+            "enter": "2024-09-21T03:39:13.455Z",
+            "exit": "2024-09-21T03:39:15.749Z"
+          },
+          {
+            "name": "Split",
+            "type": "Split",
+            "enter": "2024-09-21T03:39:13.465Z",
+            "exit": "2024-09-21T03:39:15.749Z"
+          },
+          {
+            "name": "Generate base offer",
+            "type": "RuleSetNode",
+            "enter": "2024-09-21T03:39:13.466Z",
+            "exit": "2024-09-21T03:39:15.748Z"
+          },
+          {
+            "name": "Log Offer",
+            "type": "ActionNode",
+            "enter": "2024-09-21T03:39:13.979Z",
+            "exit": "2024-09-21T03:39:15.747Z"
+          },
+          {
+            "name": "HR Interview",
+            "type": "HumanTaskNode",
+            "enter": "2024-09-21T03:39:13.981Z",
+            "exit": null
+          }
+        ]
+      }
+    ]
+  }
+}
+```
 
 
 ## Use the Canvas
