@@ -274,7 +274,7 @@ Notes:
 
 ![Cloud Runtime Providers](images/CloudRuntimeProviders.jpg)
 
-Note that for Production, CI/CD pipelines would be needed as deployement should not be done directly from Canvas.
+Note that for Production, CI/CD pipelines would be needed because deployment should not be done directly from Canvas.
 
 
 
