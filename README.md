@@ -1,6 +1,8 @@
 # BAMOE 9 Enablement - Lab
 
-This project details the lab for the BAMOE 9 enablement.
+This project provide details and instructions for the lab for the BAMOE 9 enablement.
+
+Note that this lab does not intend to teach what BPMN or DMN specifications are, not to teach how to design business processes or business rules. Its objectives is to show what features and tooling are featured as part of BAMOE 9.1 release.
 
 
 ## Important
