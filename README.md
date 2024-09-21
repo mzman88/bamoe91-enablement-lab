@@ -266,7 +266,12 @@ In the TechZone VM, Canvas was not set up to use a remote GIT repository. But cl
 
 ![GIT Providers](images/GitProviders.jpg)
 
+Similarly, it is possible to deploy directly a business process onto a dedicated DEV environment. For now, the following options are available within Canvas:
+
+![Cloud Runtime Providers](images/CloudRuntimeProviders.jpg)
+
+Note that for Production, CI/CD pipelines would be needed as deployement should not be done directly from Canvas.
 
 
 
-**This complete the BAMOE 9.1 lab.**
+**This completes the BAMOE 9.1 lab.**
