@@ -262,11 +262,15 @@ It also allows non-technical users to participate in a BAMOE project without the
 
 Upload the following file into Canvas: `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\hiring.bpmn`
 
-In the TechZone VM, Canvas was not set up to use a remote GIT repository. But clients will want to do so. For now, the following options are avilable within Canvas:
+In another tab, follow the same steps to upload the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\NewHiringOffer` file. 
+
+Notes: 
+
+- In the TechZone VM, Canvas was not set up to use a remote GIT repository. But clients will want to do so. For now, the following options are avilable within Canvas:
 
 ![GIT Providers](images/GitProviders.jpg)
 
-Similarly, it is possible to deploy directly a business process onto a dedicated DEV environment. For now, the following options are available within Canvas:
+- Similarly, it is possible to deploy directly a business process onto a dedicated DEV environment. For now, the following options are available within Canvas:
 
 ![Cloud Runtime Providers](images/CloudRuntimeProviders.jpg)
 
