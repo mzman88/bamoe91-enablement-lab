@@ -16,16 +16,16 @@ Note that 9.1 is supported for stateless business processes i.e. which do not re
 
 ## Objectives
 
-In this lab, we will be using the VM already set up for BAMOE 9.1 usage in TechZone.
+In this lab, we will be using the VM already set up for BAMOE 9.1 usage in IBM Technology Zone.
 We will be starting all services and deploy a sample project which contains a business process.
 This project is part of the BAMOE 9.1 distribution samples and includes a *docker-compose* configuration aiming at starting all needed services.
 
 
 ## Steps
 
-### TechZone
+### Technology Zone
 
-Connect to the BAMOE 9.1 TechZone VM, either using Microsoft Remote Desktop or within a Chrome browser.
+Connect to the BAMOE 9.1 Technology Zone VM, either using Microsoft Remote Desktop or within a Chrome browser.
 <region>.services.cloud.techzone.ibm.com:XXX is the URL, replacing with the port assigned to you.
 The VMs are Windows-based and the credentials to login are: user: `techzone`, password: `IBMDem0s!`
 
