@@ -65,9 +65,11 @@ The hiring process aims at identifying if a candidate is a good fit, following t
 - In the process, an automatic decision is made to compute the offer and is using business rules implemented as DMN.
 
     - DMN model:
+
     ![Compute Offer DRG](images/ComputeOfferDMNDRG.jpg)
 
     - DMN Decision Table:
+    
     ![Compute Offer Decision Table](images/ComputeOfferDMNDT.jpg)
 
 - It also includes 2 human tasks corresponding to a human resource interviewer followed by an IT interviewer, both defined as human tasks.
@@ -82,7 +84,7 @@ This project also includes a POM file which contains all libraries dependencies 
 
 ### Start
 
-On the desktop, the `start-compact.bat` batch file needs to be run. 
+On the Windows desktop, the `start-compact.bat` batch file needs to be run. 
 This will start all following services needed by the project that we will be using:
 
 - PostgreSQL database service (port 5432) - this database is needed for this sample because the project contains a stateful business process which requires persistence
