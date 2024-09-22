@@ -69,7 +69,7 @@ The hiring process aims at identifying if a candidate is a good fit, following t
     ![Compute Offer DRG](images/ComputeOfferDMNDRG.jpg)
 
     - DMN Decision Table:
-    
+
     ![Compute Offer Decision Table](images/ComputeOfferDMNDT.jpg)
 
 - It also includes 2 human tasks corresponding to a human resource interviewer followed by an IT interviewer, both defined as human tasks.
@@ -87,16 +87,16 @@ This project also includes a POM file which contains all libraries dependencies 
 On the Windows desktop, the `start-compact.bat` batch file needs to be run. 
 This will start all following services needed by the project that we will be using:
 
-- PostgreSQL database service (port 5432) - this database is needed for this sample because the project contains a stateful business process which requires persistence
-- PgAdmin (port 8055) - the UI to management the database
-- Keycloak (port 8480) - software to handle security
-- Kogito example service (port 8080)
-- Management Console (port 8280) - UI to manage the process instances
-- Task Console (port: 8380) - UI to manage the task inbox
+- PostgreSQL database service (port **5432**): this database is needed for this sample because the project contains a stateful business process which requires persistence
+- PgAdmin (port **8055**): the UI to manage the database
+- Keycloak (port **8480**): UI for the component handling security
+- Kogito example service (port **8080**)
+- Management Console (port **8280**): UI to manage the process instances
+- Task Console (port: **8380**): UI to manage the task inbox
 
 All these services are started as containers and deployed onto Podman.
 
-Please note that the *docker-compose* is useful for testing purposes but in Production clients would most likely not use this way to deploy.
+Please note that the *docker-compose* is useful for testing purposes but in Production clients would most likely not deploy this way.
 The projects containing the business logic (i.e. business processes and business rules) are to be built and deployed on Quarkus, which is actually done for you using the *docker-compose* file.
 
 
