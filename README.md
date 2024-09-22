@@ -39,7 +39,6 @@ Your VM has already been set up for a BAMOE 9.1 usage, including:
 - Maven
 - GIT client
 - A local Maven repository for the BAMOE 9.1 distribution, located in <TODO>
-- Docker CLI
 - Podman
 - A sample of the compact architecture which we will be using as a lab
 - A script to run a *docker-compose* file in charge of starting all services and tools 
@@ -48,40 +47,39 @@ Your VM has already been set up for a BAMOE 9.1 usage, including:
 
 ### Sample project
 
-We will take a look at the project that we will benusing for this lab. 
+- We will take a look at the project that we will benusing for this lab. 
 The project that is located in the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example` folder.
 
-We will use VSCode to edit all projects artifacts.  In a Windows Command Prompt (type `cmd` in the search bar), navigate to the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\` folder, and type `code .`.  This will open an instance of VSCode and load the project.  Close all editor that will open.
+- We will use VSCode to edit all projects artifacts.  In a Windows Command Prompt (type `cmd` in the search bar), navigate to the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\` folder, and type `code .`.  This will open an instance of VSCode and load the project.  Close all editor that will open.
 
-In this project, a business process (defined as BPMN) and business rules (defined as DMN) can be found under the `src\main\resources` folder.
+- In this project, a business process (defined as BPMN) and business rules (defined as DMN) can be found under the `src\main\resources` folder.
 Open both `src\main\resources\hiring.bpmn` and `src\main\resources\NewHiringOffer.dmn` file in VSCode and get familiar with them.
 
-The business process is a basic one detail a hiring process.
+- The business process is a basic one detail a hiring process.
 The hiring process aims at identifying if a candidate is a good fit, following the given workflow:
 
 ![Hiring Process](images/HiringProcessBPMN.jpg)
 
-The data model used by the business process is the following one. It includes 1 input object (*CandidateData*) and 1 output object (*Offer*).
+- The data model used by the business process is the following one. It includes 1 input object (*CandidateData*) and 1 output object (*Offer*).
 
 ![Hiring Data Model](images/HiringDataModel.jpg)
 
-In the process, an automatic decision is made to compute the offer and is using business rules implemented as DMN.
+- In the process, an automatic decision is made to compute the offer and is using business rules implemented as DMN.
 
-- DMN model:
+    - DMN model:
 
 ![Compute Offer DRG](images/ComputeOfferDMNDRG.jpg)
 
-- DMN Decision Table:
+    - DMN Decision Table:
 
 ![Compute Offer Decision Table](images/ComputeOfferDMNDT.jpg)
 
-It also includes 2 human tasks corresponding to a human resource interviewer followed by an IT interviewer, both defined as human tasks.
+- It also includes 2 human tasks corresponding to a human resource interviewer followed by an IT interviewer, both defined as human tasks.
 A few other tasks are defined, mostly script tasks for logging purposes.
 
 For more information about the project, please refer to the README.
 
 BPMN specification and BAMOE includes many more types of tasks, but we will only be using a few of them for this lab.
-
 
 This project also includes a POM file which contains all libraries dependencies needed for the project, as well as BAMOE 9 extensions, such as the ones for the 2 consoles.
 
