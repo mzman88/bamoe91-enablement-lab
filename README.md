@@ -66,13 +66,9 @@ The hiring process aims at identifying if a candidate is a good fit, following t
 
 - In the process, an automatic decision is made to compute the offer and is using business rules implemented as DMN.
 
-    - DMN model:
+    - DMN model: ![Compute Offer DRG](images/ComputeOfferDMNDRG.jpg)
 
-![Compute Offer DRG](images/ComputeOfferDMNDRG.jpg)
-
-    - DMN Decision Table:
-
-![Compute Offer Decision Table](images/ComputeOfferDMNDT.jpg)
+    - DMN Decision Table: ![Compute Offer Decision Table](images/ComputeOfferDMNDT.jpg)
 
 - It also includes 2 human tasks corresponding to a human resource interviewer followed by an IT interviewer, both defined as human tasks.
 A few other tasks are defined, mostly script tasks for logging purposes.
