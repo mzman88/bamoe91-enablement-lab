@@ -11,12 +11,12 @@ Please keep in mind that BAMOE 9.1 release is **Tech Preview** for stateful proc
 Therefore, some features and functionalities are either non provided or still being implemented and tested.
 The 9.2 release scheduled for Q4-2024 will be the first supported PAMOE version of BAMOE 9 powered by Kogito.
 
-Note that DMOE 9.1 is already supported for stateless business processes i.e. which do not require persistence.
+Note that DMOE 9.1 is already supported for stateless business processes i.e. use cases which do not require persistence.
 
 
 ## Objectives
 
-In this lab, we will be using the VM already set up for BAMOE 9.1 usage in IBM Technology Zone.
+In this lab, we will be using the Virtual Machine already set up for BAMOE 9.1 usage in IBM Technology Zone.
 We will be starting all services and deploy a sample project which contains a business process.
 This project is part of the BAMOE 9.1 distribution samples and includes a *docker-compose* configuration aiming at starting all needed services.
 
@@ -25,8 +25,8 @@ This project is part of the BAMOE 9.1 distribution samples and includes a *docke
 
 ### Technology Zone
 
-Connect to the BAMOE 9.1 Technology Zone VM, either using Microsoft Remote Desktop or within a Chrome browser.
-<region>.services.cloud.techzone.ibm.com:XXX is the URL, replacing with the port assigned to you.
+Connect to the BAMOE 9.1 Technology Zone Virtual Machine, either using Microsoft Remote Desktop or within a Chrome browser.
+<region>.services.cloud.techzone.ibm.com:XXX is the URL, replacing the port number with the one assigned to you.
 The VMs are Windows-based and the credentials to login are: user: `techzone`, password: `IBMDem0s!`
 
 
@@ -42,7 +42,7 @@ Your VM has already been set up for a BAMOE 9.1 usage, including:
 - Docker CLI
 - Podman
 - A sample of the compact architecture which we will be using as a lab
-- A script to run a *docker-compose* YAML file
+- A script to run a *docker-compose* file in charge of starting all services and tools 
 - Canvas
 
 
