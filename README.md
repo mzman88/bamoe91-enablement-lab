@@ -57,18 +57,18 @@ Open both `src\main\resources\hiring.bpmn` and `src\main\resources\NewHiringOffe
 
 - The business process is a basic one detail a hiring process.
 The hiring process aims at identifying if a candidate is a good fit, following the given workflow:
-
 ![Hiring Process](images/HiringProcessBPMN.jpg)
 
 - The data model used by the business process is the following one. It includes 1 input object (*CandidateData*) and 1 output object (*Offer*).
-
 ![Hiring Data Model](images/HiringDataModel.jpg)
 
 - In the process, an automatic decision is made to compute the offer and is using business rules implemented as DMN.
 
-    - DMN model: ![Compute Offer DRG](images/ComputeOfferDMNDRG.jpg)
+    - DMN model:
+    ![Compute Offer DRG](images/ComputeOfferDMNDRG.jpg)
 
-    - DMN Decision Table: ![Compute Offer Decision Table](images/ComputeOfferDMNDT.jpg)
+    - DMN Decision Table:
+    ![Compute Offer Decision Table](images/ComputeOfferDMNDT.jpg)
 
 - It also includes 2 human tasks corresponding to a human resource interviewer followed by an IT interviewer, both defined as human tasks.
 A few other tasks are defined, mostly script tasks for logging purposes.
