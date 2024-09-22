@@ -7,7 +7,7 @@ Note that this lab does not intend to teach what BPMN or DMN specifications are,
 
 ## Important
 
-Please keep in mind that BAMOE 9.1 is Tech Preview for stateful processes use cases and is not meant for Production. 
+Please keep in mind that BAMOE 9.1.x release is **Tech Preview** for stateful processes use cases and is not meant for Production. 
 Therefore, some features and functionalities are either non provided or still being tested.
 The 9.2 release scheduled for Q4-2024 will be the first supported version of BAMOE 9 powered by Kogito.
 
