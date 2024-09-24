@@ -273,6 +273,18 @@ Note that this DMN is the same one that the business process is using, but we no
 
 ![New Hiring Offer DMN](images/NewHiringOfferDMN.jpg)
 
+In the menu (top-right section) select the "Run > As Form" option. This will generate a form that includes the input data expected by the DMN.
+Enter some test data, for instance:
+
+- Candidate name: John
+- Candidate last name: Doe
+- Candidate email: john@doe.com
+- Number of years of experience: 10
+- Skills: Java, NodeJS
+
+As you enter this data, your will notice that the Output section is getting populated. That is because the DMN engine fires the rules as you type the input data.  The offer `category` and `salary` are dynamically recomputed based on the logic that is in the business rules of that DMN.
+
+![DMN testing](images/DMNTesting.jpg)
 
 
 ### Load a business process
