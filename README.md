@@ -257,6 +257,8 @@ BAMOE 9 also features Canvas, a web application UI for designing and comitting a
 
 ![Canvas](images/Canvas1.jpg)
 
+### Load a business process
+
 For IBM BAMOE clients, Canvas is provided as a tool which can connect to a remote enterprise GIT repository.
 It also allows non-technical users to participate in a BAMOE project without the need to use an IDE such as VSCode.
 
@@ -275,6 +277,20 @@ Notes:
 ![Cloud Runtime Providers](images/CloudRuntimeProviders.jpg)
 
 Note that for Production, CI/CD pipelines would be needed because deployment should not be done directly from Canvas.
+
+
+### Load a DMN
+
+Canvas allows to test DMN on the fly using an extended services.  In the TechZone VM, this service has already been set up (on port 21345).
+
+![Extended Service](images/ExtendedService.jpg)
+
+
+In the main Canvas panel, load the following local DMN file: `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\NewHiringOffer.dmn`
+Note that this DMN is the same one that the business process is using, but we now want to test this DMN by itself.
+
+![New Hiring Offer DMN](images/NewHiringOfferDMN.jpg)
+
 
 
 
