@@ -276,13 +276,13 @@ Note that this DMN is the same one that the business process is using, but we no
 In the menu (top-right section) select the "Run > As Form" option. This will generate a form that includes the input data expected by the DMN.
 Enter some test data, for instance:
 
-- Candidate name: John
-- Candidate last name: Doe
-- Candidate email: john@doe.com
-- Number of years of experience: 10
-- Skills: Java, NodeJS
+- Candidate name: **John**
+- Candidate last name: **Doe**
+- Candidate email: **john@doe.com**
+- Number of years of experience: **10**
+- Skills: **Java**, **NodeJS**
 
-As you enter this data, your will notice that the Output section is getting populated. That is because the DMN engine fires the rules as you type the input data.  The offer `category` and `salary` are dynamically recomputed based on the logic that is in the business rules of that DMN.
+As you enter this data, your will notice that the "Output" section on the right-handside is getting populated. That is because the DMN engine fires the rules as you type the input data in.  The offer `category` and `salary` values are dynamically recomputed based on the logic that is in the business rules of that DMN.
 
 ![DMN testing](images/DMNTesting.jpg)
 
@@ -306,7 +306,7 @@ For now, it is not possible to unit test a business process like we just did for
 
 ![Cloud Runtime Providers](images/CloudRuntimeProviders.jpg)
 
-Note that for Production, CI/CD pipelines would be needed because deployment should not be done directly from Canvas.
+Note that for Production environment, CI/CD pipelines would be needed because deployment should not be done directly from Canvas.
 
 
 
