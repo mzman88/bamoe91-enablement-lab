@@ -26,7 +26,7 @@ This project is part of the BAMOE 9.1 distribution samples and includes a *docke
 ### Technology Zone
 
 Connect to the BAMOE 9.1 Technology Zone Virtual Machine, either using Microsoft Remote Desktop or within a Chrome browser.
-<region>.services.cloud.techzone.ibm.com:XXX is the URL, replacing the port number with the one assigned to you.
+`useast.services.cloud.techzone.ibm.com:<your_assigned_port_number>` is the URL, replacing the port number with the one assigned to you.
 The VMs are Windows-based and the credentials to login are: user: `techzone`, password: `IBMDem0s!`
 
 
