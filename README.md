@@ -257,29 +257,11 @@ BAMOE 9 also features Canvas, a web application UI for designing and comitting a
 
 ![Canvas](images/Canvas1.jpg)
 
-### Load a business process
-
-For IBM BAMOE clients, Canvas is provided as a tool which can connect to a remote enterprise GIT repository.
+For IBM BAMOE customers, Canvas is provided as a tool which can connect to a remote enterprise GIT repository.
 It also allows non-technical users to participate in a BAMOE project without the need to use an IDE such as VSCode.
 
-Upload the following file into Canvas: `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\hiring.bpmn`
 
-In another tab, follow the same steps to upload the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\NewHiringOffer` file. 
-
-Notes: 
-
-- In the TechZone VM, Canvas was not set up to use a remote GIT repository. But clients will want to do so. For now, the following options are avilable within Canvas:
-
-![GIT Providers](images/GitProviders.jpg)
-
-- Similarly, it is possible to deploy directly a business process onto a dedicated DEV environment. For now, the following options are available within Canvas:
-
-![Cloud Runtime Providers](images/CloudRuntimeProviders.jpg)
-
-Note that for Production, CI/CD pipelines would be needed because deployment should not be done directly from Canvas.
-
-
-### Load a DMN
+### Load and test a DMN
 
 Canvas allows to test DMN on the fly using an extended services.  In the TechZone VM, this service has already been set up (on port 21345).
 
@@ -290,6 +272,29 @@ In the main Canvas panel, load the following local DMN file: `C:\kogito-examples
 Note that this DMN is the same one that the business process is using, but we now want to test this DMN by itself.
 
 ![New Hiring Offer DMN](images/NewHiringOfferDMN.jpg)
+
+
+
+### Load a business process
+
+Upload the following file into Canvas: `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\hiring.bpmn`
+
+In another tab, follow the same steps to upload the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\NewHiringOffer` file. 
+
+For now, it is not possible to unit test a business process like we just did for a DMN. Future BAMOE releases may offer that functionality.
+
+
+### Notes on Canvas
+
+- In the TechZone VM, Canvas was not set up to use a remote GIT repository. But clients will want to do so. For now, the following options are avilable within Canvas:
+
+![GIT Providers](images/GitProviders.jpg)
+
+- Similarly, it is possible to deploy directly a business process onto a dedicated DEV environment. For now, the following options are available within Canvas:
+
+![Cloud Runtime Providers](images/CloudRuntimeProviders.jpg)
+
+Note that for Production, CI/CD pipelines would be needed because deployment should not be done directly from Canvas.
 
 
 
