@@ -104,22 +104,23 @@ The projects containing the business logic (i.e. business processes and business
 
 - In a new Chrome tab, open keycloak UI 
     - URL: http://localhost:8480
-    - Click on "Administration Console" 
-    - Login using the following credentials: user: admin,  pwd: admin
-    - Change the schema from Master to Kogito (top-left)
-    - Click on "Users", you should see the different users pre-configured as part of the docker-compose set up
-    - For this example, no groups/role have been created, so the business process needs to grant access to human tasks using users directly
+    - Click on *Administration Console* 
+    - Login using the following credentials: user: `admin`,  pwd: `admin`
+    - Change the realm from *Master* to *Kogito* (top-left menu)
+    - Click on *Users*, you should see the different users pre-configured as part of the docker-compose set up
+    - For this example, no groups/role have been created, so the business process needs to grant access to human tasks using users directly (this is set up at design). It is actually not a good practice as it is recommended to use groups/roles.
 - In a new Chrome tab, open PGAdmin
     - URL: http://localhost:8055
     - Check out the BAMOE 9 tables by expanding `Servers > kogito > Databases > kogito > Schemas > public > Tables`
+    - You can see that PAMOE 9 uses many database tables to guarantee that process instances states and data are not lost and can be retrieved
 - In a new Chrome tab, open the Management Console
     - URL: http://localhost:8280
-    - Login using the following credentials: user: jdoe, password: jdoe.  This user and his business roles have been added at startup in the keycloak configuration
+    - Login using the following credentials: user: `jdoe`, password: `jdoe`.  This user and his business roles have been added at startup in the keycloak configuration
     - Note that there are no process instance visible yet
 - In a new Chrome tab, open the Task Console
     - URL: http://localhost:8380
-    - You should not need to login again as the SSO is taken care of by the keycloak component
-    - Note that there are no human task assign to this user
+    - You should not need to login again as the keycloak module is taken care of the SSO
+    - Note that there are no human task assign to this user yet
 - In a new Chrome tab, open the Swagger UI 
     - URL: http://localhost:8080/q/swagger-ui
     - Note that the REST endpoints are specific to the business process and have been automatically generated
