@@ -50,7 +50,7 @@ Your VM has already been set up for a BAMOE 9.1 usage, including:
 - We will take a look at the project that we will benusing for this lab. 
 The project that is located in the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example` folder.
 
-- We will use VSCode to edit all projects artifacts.  In a Windows Command Prompt (type `cmd` in the search bar), navigate to the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\` folder, and type `code .`.  This will open an instance of VSCode and load the project.  Close all editor that will open.
+- We will use VSCode to edit all projects artifacts.  In a Windows Command Prompt (type `cmd` in the search bar), navigate to the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\` folder, and type `code .`.  This will open an instance of VSCode and load the project.  You could also load the project from VSCode using the "*File > Open Folder...*" option.   Make sure you are not seeing the project that opens by default as it is not the right project!
 
 - In this project, a business process (defined as BPMN) and business rules (defined as DMN) can be found under the `src\main\resources` folder.
 Open both `src\main\resources\hiring.bpmn` and `src\main\resources\NewHiringOffer.dmn` file in VSCode and get familiar with them.
