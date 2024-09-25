@@ -165,6 +165,7 @@ If you had created multiple process instances, they would all show on that conso
 You can see the information related to this process instance, including the data, the timeline, 
 Keep in mind that all this information is persisted in the BAMOE database.
 
+- In the Command shell where the deployment took place, take a look at the logs in the console. You will notice some traces that were generated as the process instances moves forward.
 
 - In the Task Console, refresh the list of tasks. You should now see the task that needs to be completed first, which corresponds to the Human Resource interviewer task.
 Please note that there is a boundary timer on this task set to 180 seconds, so if you do not complete this task within 3mn, it will move to the next step of the process.  In such a case, you will need to recreate a new process instance as you did before.
