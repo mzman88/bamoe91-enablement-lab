@@ -300,7 +300,7 @@ As you enter this data, your will notice that the "Output" section on the right-
 
 Upload the following file into Canvas: `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\hiring.bpmn`
 
-In another tab, follow the same steps to upload the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\NewHiringOffer` file. 
+In another tab, follow the same steps to upload the `C:\kogito-examples\kogito-quarkus-examples\jbpm-compact-architecture-example\src\main\resources\NewHiringOffer.bpmn` file. 
 
 For now, it is not possible to unit test a business process like we just did for a DMN. Future BAMOE releases may offer that functionality.
 
