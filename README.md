@@ -116,6 +116,13 @@ The projects containing the business logic (i.e. business processes and business
 - In a new Chrome tab, open the Swagger UI 
     - URL: http://localhost:8080/q/swagger-ui
     - Note that the REST endpoints are specific to the business process and have been automatically generated
+- In a new Chrome tab, open keycloak UI 
+    - URL: http://localhost:8480
+    - Click on "Administration Console" 
+    - Login using the following credentials: user: admin,  pwd: admin
+    - Change the schema from Master to Kogito (top-left)
+    - Click on "Users", you should see the different users pre-configured as part of the docker-compose set up
+    - For this example, no groups/role have been created, so the business process needs to grant access to human tasks using users directly
 - Start a process instance
     - Using Swagger and the `/hiring` **POST** endpoint, create a new process instance by clicking on `Try it out` and using the following input data (Note that instead of using Swagger, you could use the `cURL` command line interface):
 ```json
